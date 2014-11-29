@@ -1,0 +1,85 @@
+@import "cropless/crop.less";
+
+@card-width: 150px;
+@card-height: 210px;
+
+@blocked-card-width: 21px;
+
+@discard-width: 135px;
+@discard-height: 189px;
+
+@buffer-height: 30px;
+
+body, html {
+  height: 100%;
+  /*background-image: url('http://cdn.superbwallpapers.com/wallpapers/cartoons/elsa-frozen-25406-400x250.jpg');*/
+}
+* {
+  box-sizing: border-box;
+}
+
+.hor-center {
+  /*width: 100%;*/
+  display: block;
+  margin-left: auto;  
+  margin-right: auto;
+  background-color: #b0e0e6;
+}
+
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  display: inline-block;
+}
+
+.panel-element {
+  float: left;
+  width: 33%;
+  height: 100%;
+  /*display: inline-block;*/
+}
+
+.buttons-bar {
+  width: 110px;
+  /*height: 20%;*/
+  clear: left;
+  /*display: inline-block;*/
+}
+
+.main-bar {
+  width: 100%;
+  height: 70%;
+}
+
+.card {
+  float: left;
+  display: inline-block;
+  div {
+    width: @card-width;
+    height: @buffer-height;
+  }
+
+  img {
+    width: @card-width;
+    height: @card-height;
+  }
+  width: @blocked-card-width;
+}
+
+.discard-pile {
+  width: 10%;
+  min-width: @card-width;
+}
+
+.discard {
+
+  img {
+    width: @discard-width;
+    height: @discard-height;
+  }
+}
+

@@ -1,14 +1,21 @@
 <head>
-  <title>web</title>
+  <title>gin</title>
 </head>
 
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  <!-- {{> hello}} -->
+  {{> game}}
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name="game">
+  <p>This is where game will be displayed</p>
+  <div class="game-container"> Hi </div>
 </template>

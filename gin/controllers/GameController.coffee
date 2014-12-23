@@ -5,7 +5,7 @@ class root.GameController
     console.log('initializing game.')
 
     @_createGameModel()
-    @_createGameView()
+    @_createGameView()    
 
 
   _createGameModel: =>

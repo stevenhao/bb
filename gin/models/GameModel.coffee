@@ -5,12 +5,15 @@ class root.GameModel extends Backbone.Model
     player1: null
     player2: null
     dealer: 1
+    turn: 1
+    deck: new root.DeckModel
 
   initialize: =>
     @set 'player1', new root.PlayerModel
       name: 'player 1'
     @set 'player2', new root.PlayerModel
       name: 'player 2'
+    
 
   getPlayer: (id) =>
     if id == 1

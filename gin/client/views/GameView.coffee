@@ -2,8 +2,7 @@ root = exports ? this
 
 class root.GameView extends Backbone.View
 
-  events: # this is a backbone thing
-    'click': 'animate' # when the div is clicked, "animate" is called
+  className: 'GameView'
 
   initialize: ({@model}) => # the {@model} auto-assigns parameter to @model
     # placeholder = $ '<p> Placeholder for Game View </p>'
@@ -24,12 +23,12 @@ class root.GameView extends Backbone.View
       cardView = new root.CardView
         model: cardModel
         gameModel: @model
+      cardView.$el.attr('hidden', true)
       @$el.append cardView.$el
+    @show()
 
-  animate: =>
-    console.log('animating.')
+  show: =>
     @$el.children().each (index) -> #skinny arrow magic: @ refers to a child (an html-div-object)
-      $(@).attr('hidden', true) # $(@) gives a jquery object (a wrapper around the html object)
       _.delay () =>
         $(@).attr('hidden', false)  # the jquery object let's me call .attr
         # @hidden = false # this is how i would do it without jquery

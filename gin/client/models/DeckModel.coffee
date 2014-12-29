@@ -23,3 +23,6 @@ class root.DeckModel extends Backbone.Model
       cards[newIndex] = cards[index]
       cards[index] = tempCard
       
+  getTen: =>
+    console.log('getting first ten cards of deck')
+    return @get('cards')[0:10]

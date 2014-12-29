@@ -13,14 +13,24 @@ class root.GameView extends Backbone.View
     player2Model = @model.getPlayer(2)
     player1View = new root.PlayerView
       model: player1Model
+      gameModel: @model
     player2View = new root.PlayerView
       model: player2Model
+      gameModel: @model
     @$el.append player1View.$el
     @$el.append player2View.$el
 
     deckModel = @model.get('deck')
     _.each deckModel.get('cards'), (cardModel) => 
       console.log(cardModel.get('rank'))
+      cardView = new root.CardView
+        model: cardModel
+        gameModel: @model
+      @$el.append cardView.$el
+
+    handModel = new root.handModel
+      startingCards: @model.get('deck')[...10]
+    _.each handModel.get('cards'), (cardModel) =>
       cardView = new root.CardView
         model: cardModel
         gameModel: @model

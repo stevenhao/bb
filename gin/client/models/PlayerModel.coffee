@@ -6,4 +6,4 @@ class root.PlayerModel extends Backbone.Model
 
   initialize: ({@name}) =>
     console.log("initialized player with name=#{@name}")
-    @set 'name', @name
+    # @set 'name', @name

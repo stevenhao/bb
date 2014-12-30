@@ -10,8 +10,10 @@ class root.GameModel extends Backbone.Model
 
   initialize: =>
     @set 'player1', new root.PlayerModel
+      game: @
       name: 'player 1'
     @set 'player2', new root.PlayerModel
+      game: @
       name: 'player 2'
     
 

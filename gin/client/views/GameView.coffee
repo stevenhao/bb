@@ -2,8 +2,7 @@ root = exports ? this
 
 class root.GameView extends Backbone.View
 
-  events: # this is a backbone thing
-    'click': 'animate' # when the div is clicked, "animate" is called
+  className: 'game'
 
   initialize: ({@model}) => # the {@model} auto-assigns parameter to @model
     # placeholder = $ '<p> Placeholder for Game View </p>'
@@ -20,28 +19,19 @@ class root.GameView extends Backbone.View
     @$el.append player1View.$el
     @$el.append player2View.$el
 
-    deckModel = @model.get('deck')
-    _.each deckModel.get('cards'), (cardModel) => 
-      console.log(cardModel.get('rank'))
-      cardView = new root.CardView
-        model: cardModel
-        gameModel: @model
-      @$el.append cardView.$el
+    # deckModel = @model.get('deck')
+    # _.each deckModel.get('cards'), (cardModel) => 
+    #   console.log(cardModel.get('rank'))
+    #   cardView = new root.CardView
+    #     model: cardModel
+    #     gameModel: @model
+    #   @$el.append cardView.$el
 
-    handModel = new root.HandModel
-      cards: deckModel.get('cards')[...10]
-    @$el.append($('<p>'))
-    _.each handModel.get('cards'), (cardModel) =>
-      cardView = new root.CardView
-        model: cardModel
-        gameModel: @model
-      @$el.append cardView.$el
-
-  animate: =>
-    console.log('animating.')
-    @$el.children().each (index) -> #skinny arrow magic: @ refers to a child (an html-div-object)
-      $(@).attr('hidden', true) # $(@) gives a jquery object (a wrapper around the html object)
-      _.delay () =>
-        $(@).attr('hidden', false)  # the jquery object let's me call .attr
-        # @hidden = false # this is how i would do it without jquery
-      , 50 * index + 500
+    # handModel = new root.HandModel
+    #   cards: deckModel.get('cards')[...10]
+    # @$el.append($('<br><br><br><br><br><br><br><br>'))
+    # _.each handModel.get('cards'), (cardModel) =>
+    #   cardView = new root.CardView
+    #     model: cardModel
+    #     gameModel: @model
+    #   @$el.append cardView.$el

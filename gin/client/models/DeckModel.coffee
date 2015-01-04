@@ -13,6 +13,7 @@ class root.DeckModel extends Backbone.Model
     			rank: rank
     			suit: suit
     @shuffle()
+    @cur = 0
 
   shuffle: =>
     console.log('shuffle')
@@ -25,7 +26,7 @@ class root.DeckModel extends Backbone.Model
       
   deal: (hand) =>
     # deal one card into hand (a hand model)
-    hand.get('cards').push(_.first @get 'cards')
+    hand.get('cards').push @get('cards')[@cur++]
 
   getTen: =>
     console.log('getting first ten cards of deck')

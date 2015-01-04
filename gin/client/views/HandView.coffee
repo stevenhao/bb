@@ -3,8 +3,8 @@ root = exports ? this
 class root.HandView extends Backbone.View
   className: 'hand'
 
-  events: # this is a backbone thing
-    'click': 'animate' # when the div is clicked, "animate" is called
+  # events: # this is a backbone thing
+  #   'click': 'animate' # when the div is clicked, "animate" is called
 
   initialize: ({@model}) =>
     console.log "initializing hand view with model = #{@model}"
@@ -13,6 +13,7 @@ class root.HandView extends Backbone.View
     
 
   render: =>
+    console.log('rendering.')
     @$el.empty()
     cards = @model.get('cards')
     for cardModel in cards

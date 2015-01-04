@@ -34,4 +34,4 @@ class root.GameView extends Backbone.View
     #   cardView = new root.CardView
     #     model: cardModel
     #     gameModel: @model
-    #   @$el.append cardView.$el
+    #   @ $el.append cardView.$el

@@ -4,13 +4,6 @@ class root.HandModel extends Backbone.Model
   defaults:
     cards: []
 
-  initialize: ({@cards}) =>
-    console.log('hand initialized')
-    # cards = @get('cards')
-    # for i in _.range(10)
-    #   cards.push startingCards[i]
-    @sort()
-      
   sort: =>
     console.log('sort')
     cards = @get('cards')

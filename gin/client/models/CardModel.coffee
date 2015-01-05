@@ -1,9 +1,12 @@
 root = exports ? this
 
 class root.CardModel extends Backbone.Model
-  # defaults:
-  #   rank: null
-  #   suit: null
+  defaults:
+     rank: null
+     suit: null
+     selected: false
+
+
 
   @rankNames:
     1: 'A'
@@ -32,7 +35,15 @@ class root.CardModel extends Backbone.Model
     return @_getRankName() + @_getSuitName()
 
   _getRankName: =>
-    return root.CardModel.rankNames[@rank]
+    return root.CardModel.rankNames[@get 'rank']
 
   _getSuitName: =>
-    return root.CardModel.suitNames[@suit]
+    return root.CardModel.suitNames[@get 'suit']
+
+  toggleSelected: =>
+    if @get 'selected'
+      @set 'selected', false
+    else
+      @set 'selected', true
+    @trigger 'changed'
+    console.log('clicked')

@@ -1,9 +1,9 @@
 @import "cropless/crop.less";
 
-@card-width: 100px;
-@blocked-card-width: 13px;
-@card-height: 140px;
-@buffer-height: 20px;
+@card-width: 150px;
+@blocked-card-width: 21px;
+@card-height: 210px;
+@buffer-height: 30px;
 
 body, html {
   height: 100%;
@@ -25,10 +25,7 @@ body, html {
       width: @card-width;
       height: @card-height;
     }
-
-    &.blocked {
-      width: 13px; 
-    }
+    width: @blocked-card-width;
 }
 
 .player {

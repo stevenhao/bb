@@ -1,0 +1,254 @@
+body{cursor:default;}
+p{padding-bottom:1.2em;}
+.bold{font-weight:bold;}
+.bolder{font-weight:bolder;}
+.slightlyLarge{font-size:125%;}
+.large{font-size:150%;}
+.word{font-family:monospace;font-weight:bold;font-size:150%;}
+.subTitle{font-weight:bold;text-align:right;color:#fff;white-space:nowrap;}
+#tstats{display:none;float:right;}
+#tstats-name{font-weight:bold;}
+.mainUserInfoBox{font-size:90%;}
+.mainUserInfoBoxWpm{padding-right:4px;}
+.mainUserInfoBox .MainUserInfoEditor a{margin-right:5px;white-space:nowrap;}
+.wpmInfoPopup{width:400px;}
+.skillLevelInfoPopup{width:180px;}
+#blogLink .ImageButton{display:inline;margin-left:1px;}
+.view{margin-left:auto;margin-right:auto;}
+.mainViewportHolder{width:644px;margin-left:auto;margin-right:auto;}
+.mainViewport{width:644px;margin-left:auto;margin-right:auto;}
+.eastWidget{padding-left:20px;padding-bottom:33px;background-color:white;}
+#tr_textHeader{text-align:center;}
+#tr_textHeader h2{vertical-align:top;}
+#tr_textHeader h1{padding-top:0;}
+.mainMenu #tr_textHeader{text-align:left;}
+.mainMenu .mainMenuAdUnit{margin-top:20px;}
+.mainMenuItemPanel a{font-family:Arial,sans-serif;font-size:14px;}
+.mainMenuItemPanel .ImageButton{margin:0 16px;}
+.mainMenuItemPanel-highlighted .ImageButton{margin:0;}
+.mainMenuItemPanel-highlighted a{font-size:20px;font-weight:bold;}
+.mainMenuItemPanel-highlighted .mainMenuItemText{margin-top:12px;}
+.mainMenuOptionsPanel{margin-top:16px;}
+.mainMenuOptionsBody{margin-top:8px;margin-left:18px;}
+.gameView{width:100%;}
+.gameView .gameStatusLabel{font-weight:bold;font-size:120%;color:#3B5998;}
+.gameView .gameStatusLabel-flashOn{color:red;}
+.gameView .navControls{margin-top:10px;}
+.gameView .raceAgainLink{font-size:125%;font-weight:bold;}
+.gameView .statusDisplay{margin-left:60px;font-size:120%;}
+.gameView .statusDisplay .timePrompt{margin-right:10px;}
+.gameView .statusDisplay .timeDisplay{font-weight:bold;}
+.gameView .statusDisplay .timeDisplay-flashOn{color:red;}
+.gameView .wpmPrompt{font-size:120%;font-weight:bold;margin-right:10px;}
+.gameView .wpm{font-weight:bold;font-size:120%;width:4em;}
+.gameView .inputPanel{margin-top:10px;width:100%;}
+.gameView .inputPanel .prompt{font-size:120%;color:#3B5998;font-weight:bold;}
+.gameView .inputPanel .game-typing-feedback{color:red;}
+.unselectable{-moz-user-select:none;-webkit-user-select:none;-khtml-user-select:none;-ms-user-select:none;user-select:none;}
+.gameView .inputPanel .hideableWords{font-family:Arial,serif;font-size:26px;margin:10px 0 2px 0;white-space:nowrap;overflow:hidden;}
+.gameView .inputPanel .nonHideableWords{font-family:Arial,serif;font-size:20px;margin:10px 0 2px 0;}
+.gameView .inputPanel .logographicWords{font-family:Arial,serif;font-size:20px;margin:10px 0 2px 0;}
+.gameView .inputPanel .txtInput.txtLogographicInput{overflow:hidden;height:50px;font-size:20px;!important;}
+.gameView .inputPanel .txtInput{color:#555;width:98%;height:35px;font-family:Arial,serif;font-size:26px;margin-top:2px;margin-bottom:10px;background:transparent none repeat scroll 0;border-width:medium;}
+.gameView .inputPanel .txtInput-unfocused{color:#CCC;}
+.gameView .inputPanel .txtInput-error{background-color:#d08383;}
+.arrowPopup{width:60px;height:35px;vertical-align:middle;font-size:13px;text-align:center;}
+.arrowPopup-start{background-image:url("images/arrows60px.cache.gif");background-position:0 0;}
+.arrowPopup-error{background-image:url("images/arrows60px.cache.gif");background-position:0 35px;}
+.arrowPopupText{font-weight:bold;padding-right:10px;font-variant:small-caps;}
+.arrowPopupTextOneLine{line-height:33px;}
+.arrowPopupTextTwoLine{line-height:13px;padding-top:3px;}
+.arrowPopupText-flashOn{color:red;}
+.typoAlertPopup{width:450px;font-size:1.2em;}
+.typoAlertErrorText{font-weight:bold;font-size:1.5em;background-color:#d08383;padding:0 4px;}
+.scoreboard{width:100%;}
+.scoreboard .row{width:100%;}
+.scoreboard .row .userInfoView{width:80px;text-align:right;padding-right:10px;white-space:nowrap;overflow:hidden;}
+.scoreboard .row .avatar{cursor:help;}
+.scoreboard .row .userInfoView-dead{font-style:italic;color:gray;}
+.scoreboard .row .playername-blank{font-style:italic;color:gray;text-align:right;padding-right:10px;overflow:hidden;}
+.scoreboard .row .progressBar{background-color:transparent;border-bottom-style:dashed;border-color:goldenrod;width:100%;margin-top:6px;}
+.scoreboard .row .rankPanel{margin-left:10px;}
+.scoreboard .row .rankPanel .rankPanelWpm-user{font-size:150%;font-weight:bold;}
+.userInfoView{cursor:help;}
+.countdownPopup{font-size:120%;background-color:#a4e3ff;border-style:solid;border-width:2px;height:165px;}
+.countdownPopup .lightLabel{padding:10px;font-weight:bold;}
+.countdownPopup .timeDisplay{padding:0 10px 10px 0;font-size:200%;}
+.helpPopup{width:400px;}
+.imgHelp{cursor:help;}
+.playerInfoPopup{font-size:85%;background-color:#a4e3ff;border-style:solid;border-width:2px;padding:5px;}
+.playerInfoPopup .player-name{font-size:125%;font-weight:bold;padding:4px 0 2px 10px;cursor:move;vertical-align:top;max-width:425px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAACCAYAAACQahZdAAAAAXNSR0IArs4c6QAAABVJREFUCNdjWLBgwWoGBgYGdBoDAADwSAeiiU6SagAAAABJRU5ErkJggg==) repeat-y;*background:url(images/dragHandleMini.cache.png) repeat-y;}
+.playerInfoPopup .imgPin{cursor:pointer;display:block;}
+.playerInfoPopup .typingSpeedLabel{margin-left:5px;}
+.playerInfoPopup .helpLabel{font-style:italic;margin-right:10px;}
+.playerInfoPopup .lnkSendMessage{margin:0 10px;}
+.UserInfoContextMenu{background-color:white;border-style:solid;border-width:1px;}
+.UserInfoContextMenu .lblUserName{font-weight:bold;margin:5px;border-bottom:solid 1px;max-width:200px;}
+.gwt-MenuBar{background-color:white;}
+.gwt-MenuItem{white-space:nowrap;}
+.gwt-MenuItem-selected{background-color:#ddd;cursor:pointer;}
+.gwt-DisclosurePanel .header{cursor:pointer;}
+.gwt-RadioButton{cursor:pointer;}
+.socialPlayerInfoPopup{background-color:#a4e3ff;border-style:solid;border-width:2px;padding:5px;}
+.socialPlayerInfoPopup .player-name{font-size:125%;font-weight:bold;}
+.roomJoinPopup{background-color:#a4e3ff;border-style:solid;border-width:2px;}
+.roomJoinPopup .heading{margin:5px 5px 0 5px;}
+.roomJoinPopup .txtRoomCode{width:200px;}
+.PopupWithIcon{background-color:#a4e3ff;border-style:solid;border-width:2px;padding:5px;}
+.PopupWithIcon .heading{font-size:125%;font-weight:bold;margin-left:5px;margin-bottom:10px;}
+.exceptionNoticePopup{background-color:#d08383;width:250px;border-style:solid;border-width:2px;padding:5px;}
+.exceptionNoticePopup a{color:#00F;}
+.exceptionNoticePopup a:hover{color:#00A;}
+.roomInvitePopup{width:500px;}
+.roomInvitePopup .urlDescription{margin:8px 0 0 0;}
+.roomInvitePopup .urlTextbox{width:496px;background-color:#F7F7F7;font-family:monospace;font-size:110%;margin:4px 0;}
+.roomInvitePopup .urlCopyHint{font-style:italic;}
+.editUserPopup{width:400px;}
+.editUserPopup .editUserPopupBody{width:380px;}
+.editUserPopup .editUserPopupSection{width:380px;}
+.editUserPopup a{cursor:pointer;}
+.flaggingPopup{width:250px;}
+.signUpForm{width:100%;}
+.signUpForm .sectionHeaderRow{color:#3B5998;font-weight:bold;padding-top:5px;}
+.signUpForm .loading-message{margin-left:10px;}
+.signUpForm .UsernameInputWidget{border-spacing:0;}
+.signUpForm .UsernameInputWidget td{padding-right:4px;}
+.fieldErrorMsg{color:red;}
+.fieldCorrectMsg{color:darkgreen;}
+.SocialNetworkLoginButtons .ImageButton{margin-left:2px;}
+.statsView{margin-top:10px;}
+.statsView .friendsListHeader{font-weight:bold;font-size:120%;}
+.statsView .friendsListFooter{font-style:italic;font-size:90%;margin-top:10px;}
+.statsView .friendsListFooter .inviteFriendsLink{font-style:normal;font-size:100%;font-weight:bold;margin-top:10px;margin-left:10px;display:list-item;}
+.abstractStatsList .friendsTable{width:100%;}
+.abstractStatsList .friendsTable .headerRow{font-style:italic;font-weight:bold;}
+.statsView .friendsTable .nameColumn{overflow:hidden;}
+.emptyListLabel{margin:10px 0 0 20px;font-style:italic;}
+.abstractStatsList .userInfoView .gwt-Label{display:inline;}
+.userStatViewLabel-asterisked{cursor:help;font-weight:bold;color:#F70;background-attachment:fixed;}
+.userStatViewAsteriskedPopup{width:300px;}
+.gwt-TabBar .gwt-TabBarItem{cursor:pointer;padding:5px;text-decoration:underline;color:#F70;}
+.gwt-TabBar .gwt-TabBarItem-selected{font-weight:bold;}
+.southWidget{margin-top:10px;margin-bottom:10px;}
+.textInfoView{width:100%;}
+.textInfoView .textInfoHeader{font-size:120%;font-weight:bold;margin:10px 0 10px 0;color:#3B5998;}
+.textInfoView .textInfoTitle{font-size:125%;margin-left:10px;}
+.textInfoView .textInfoTitle a{color:#466;}
+.textInfoView .textInfoAuthor{margin-left:10px;}
+.textInfoView .textInfoContributor{margin-left:10px;margin-top:10px;}
+.textInfoView .textInfoOwnStats{margin:2px 0 0 10px;color:#3B5998;}
+.textInfoView .textInfoOwnStatsNumber{font-size:125%;font-weight:bold;color:#466;font-family:sans-serif;}
+.textInfoView .textInfoOwnStatsNumber-good{color:#9c0;}
+.textInfoView .textInfoOwnStatsNumber-bad{color:#d08383;}
+.textInfoView .textInfoOwnStats .notFinishedMsg{font-style:italic;}
+.textInfoView .spedometer{margin-left:40px;}
+.DemoteSkillLevelPopup{font-size:125%;width:480px;}
+.LanguageChooserPopup{width:500px;}
+.InstaGibPopup{width:400px;}
+.SignUpPromptPopup{width:400px;}
+.SignUpPromptPopup-facebookInvite{width:600px;}
+.SignUpPromptPopup .promptLine{margin:10px 10px;}
+.SignUpPromptPopup .wallPubLink{font-size:150%;margin:10px 10px;}
+.SignUpPromptPopup .lnkSignUp{font-size:150%;}
+.SignUpPromptPopup .lnkLogin{font-style:italic;}
+.SignUpPromptPopup ul{padding:10px 25px;}
+.SignUpPromptPopup li{padding:5px 0;}
+.SignUpPromptPopup .linkContainer{margin-left:50px;margin-bottom:20px;}
+.NeedAccountMessage{margin:20px 0 0 20px;}
+.NeedAccountMessage .NeedAccountMessageText{margin-right:5px;font-style:italic;}
+.TextStatsView{margin-top:10px;}
+.TextStatsView a{font-size:100%;}
+.TextStatsView .gwt-TabBar .gwt-TabBarItem{padding-top:2px;width:100px;text-align:center;}
+.TextStatsView .tsvHeader .tsvhTitle{font-weight:bold;padding:2px 10px;}
+.TextStatsView .tsvHeader a{font-size:90%;text-decoration:none;vertical-align:bottom;padding-left:4px;}
+.GameResultsView .LinkButtonGroupLink{margin-left:5px;}
+.GameResultsView .LinkButtonGroupLink-selected{font-style:italic;}
+.GameResultsView .GameResultsChartView .LinkButtonGroupLink{margin-left:4px;margin-right:4px;}
+.GameResultsView .GameResultsChartView .LinkButtonGroupLink-selected{font-weight:bold;font-style:normal;}
+.GameResultsView .GameResultsChartView .pnlDownloadCsv{padding:20px 0 0 2px;}
+.room{width:100%;}
+.room .roomSection{margin-bottom:5px;}
+.room .room-title{font-weight:bold;}
+.chatView{width:100%;}
+.chatView .chatSectionTitle{font-weight:bold;}
+.chatView .messagesPanel{height:150px;width:100%;border-style:solid;border-width:2px;overflow-x:hidden;}
+.chatView .messagesPanel .message div{display:inline;}
+.chatView .messagesPanel .message .systemMessage{font-style:italic;}
+.chatView .messagesPanel .userInfoView{font-weight:bold;margin-right:5px;}
+.chatView .users-list{width:150px;height:150px;border-style:solid;border-width:2px;overflow-y:auto;overflow-x:hidden;}
+.chatView .txtChatMsgInput{width:100%;}
+.chatView .txtChatMsgInput-unfocused{color:#CCC;}
+.challengePromptDialog{width:405px;}
+.challengePromptDialog .challengePrompt{margin-bottom:10px;}
+.typingChallengeDialog{width:415px;}
+.typingChallengeDialog .challengePrompt{margin-bottom:10px;}
+.typingChallengeDialog .challengeClockPanel{font-size:120%;margin-bottom:10px;}
+.typingChallengeDialog .challengeClockPanel .timeDisplay{font-weight:bold;}
+.typingChallengeDialog .challengeClockPanel .timeDisplay-flashOn{color:red;}
+.typingChallengeDialog .challengeTimePrompt{margin-right:10px;}
+.typingChallengeDialog .challengeImg{border:solid;border-width:2px;}
+.typingChallengeDialog .challengeTextArea{margin-top:10px;width:410px;margin-bottom:10px;}
+.typingChallengeResultDialog{width:400px;}
+.typingChallengeResultDialog .resultStats{font-size:120%;}
+.typingChallengeResultDialog .resultExplanation{margin-top:10px;}
+.typingChallengeResultDialog .retryPrompt{margin-top:10px;}
+.LinkAccountPopup{width:425px;}
+.AdvancedTextBox-unfocused{color:#CCC;}
+.DirtyComboBox-unfocused{color:inherit;}
+.editAccountForm .DirtyComboBox-unfocused{color:#CCC;}
+.chrome_t{background:url(data:image/gif;base64,R0lGODlhAQAFAMIFAOnp6e/v7/Pz8/f39/n5+f///////////yH5BAEKAAcALAAAAAABAAUAAAMECCFDCQA7);*background:url(images/chrome_v.cache.png) 0 -5px;}
+.chrome_b{background:url(data:image/gif;base64,R0lGODlhAQAFAMIFAOnp6e/v7/Pz8/f39/n5+f///////////yH5BAEKAAcALAAAAAABAAUAAAMESCMBCQA7);*background:url(images/chrome_v.cache.png) 0 0;}
+.chrome_l{background:url(data:image/gif;base64,R0lGODlhBQABAMIFAOnp6e/v7/Pz8/f39/n5+f///////////yH5BAEKAAcALAAAAAAFAAEAAAMECCFDCQA7);*background:url(images/chrome_h.cache.png) 0 0;}
+.chrome_r{background:url(data:image/gif;base64,R0lGODlhBQABAMIFAOnp6e/v7/Pz8/f39/n5+f///////////yH5BAEKAAcALAAAAAAFAAEAAAMESCMBCQA7);*background:url(images/chrome_h.cache.png) -5px 0;}
+.chrome_bl{background:url(data:image/gif;base64,R0lGODlhBQAFAOMMAOvr6+zs7O3t7e/v7/Dw8PHx8fLy8vT09Pb29vf39/r6+vz8/P///////////////yH5BAEKAA8ALAAAAAAFAAUAAAQRMBikFiAnqSLKoYNAGMwGBBEAOw==);*background:url(images/chrome_corners.cache.png) 0 0;}
+.chrome_br{background:url(data:image/gif;base64,R0lGODlhBQAFAOMMAOvr6+zs7O3t7e7u7vDw8PLy8vX19fb29vf39/j4+Pr6+vz8/P///////////////yH5BAEKAA8ALAAAAAAFAAUAAAQTcClUhEqGAGTKEAUxBIcACAcTAQA7);*background:url(images/chrome_corners.cache.png) 0 -5px;}
+.chrome_tl{background:url(data:image/gif;base64,R0lGODlhBQAFAOMMAObm5ufn5+jo6Ovr6+zs7O3t7e/v7/Hx8fLy8vX19ff39/j4+P///////////////yH5BAEKAA8ALAAAAAAFAAUAAAQTkK0CwhpilCKIOcBgIElQHIkSAQA7);*background:url(images/chrome_corners.cache.png) 0 -10px;}
+.chrome_tr{background:url(data:image/gif;base64,R0lGODlhBQAFAOMLAObm5ufn5+jo6Onp6evr6+3t7fDw8PLy8vPz8/X19ff39////////////////////yH5BAEKAA8ALAAAAAAFAAUAAAQTUACBViEjoGPKEAliEICSHIUQAQA7);*background:url(images/chrome_corners.cache.png) 0 -15px;}
+.chrome_m{background-color:#fafafa;}
+.loading-message{font-style:italic;color:#666;text-align:center;}
+.ImageButton{cursor:pointer;}
+.ImageButton-on{cursor:pointer;opacity:.5;}
+#atffc{display:none;}
+#atff{display:none;}
+.GoogleyPagingControls .lnkPageNumber{margin:0 5px;}
+.GoogleyPagingControls .lblPageNumber{margin:0 5px;font-weight:bold;}
+.TopUsersList .friendsTable .headerRow{font-style:normal;font-weight:bold;}
+.columnSortArrow{font-size:125%;font-weight:bolder;vertical-align:middle;width:20px;}
+.newEastWidget{padding-left:25px;}
+.newWestWidget{padding-right:25px;}
+.newSouthWidget{padding-top:25px;}
+.adblockWarning{max-width:728px;background-color:#a4e3ff;border:2px solid;padding:2px;}
+.gwt-Button{padding:2px 6px;cursor:pointer;}
+.keyboardShortcutsReference li{list-style-position:inside;margin-top:4px;}
+.keyboardShortcutsReference table{border-spacing:4px;border-collapse:separate;}
+.keyboardShortcutsReference td:first-child{font-weight:bold;font-size:1.25em;font-family:monospace;margin-bottom:4px;padding-right:20px;}
+*{margin:0;padding:0;}
+a{color:#F70;}
+a:hover{color:#C60;}
+body{background:#007ec5 url(bg.cache.png) repeat-x scroll 0 0;color:#466;font:normal 80% "Lucida Sans Unicode",sans-serif;margin:0;}
+input{color:#555;font:normal 1em "Lucida Sans Unicode",sans-serif;}
+p,cite,code,ul{padding-bottom:1.2em;}
+h2{font-size:1.4em;margin-bottom:4px;}
+h1,h2,h3{color:#006590;padding-top:6px;}
+.clearer{clear:both;}
+.container{background:url(topleft.cache.png) no-repeat;}
+.themeHeader{height:92px;min-width:800px;}
+.title{padding:28px 20px 0 76px;width:125px;}
+.title a{color:white;text-decoration:none;}
+.title h1{color:#FFF;font:normal 2em Verdana,sans-serif;}
+.navigation{height:92px;padding:0 16px;vertical-align:bottom;white-space:nowrap;}
+.navigation a{color:#FFF;font:bold 1.2em "Trebuchet MS",sans-serif;margin-top:56px;padding:8px 8px;text-align:center;text-decoration:none;}
+.navigation a:hover{background-color:#4A91C3;color:#FFF;}
+.main{background:#FFF url(bgmain.cache.png) no-repeat;clear:both;padding:12px 12px 0 52px;}
+.sidenav{float:left;width:24%;}
+.sidenav h1{border-bottom:1px dashed #DDD;color:#E73;font-size:1.2em;height:20px;margin-top:1.2em;}
+.sidenav ul{margin:0;padding:0;}
+.sidenav li{border-bottom:1px dashed #EEE;list-style:none;margin:0;}
+.sidenav li a{color:#777;display:block;font-size:.9em;padding:3px 6px 3px 18px;text-decoration:none;}
+.sidenav li a:hover{color:#111;background:url(nav_li.gif) no-repeat;}
+.themeContent{min-height:400px;height:auto!important;padding-bottom:20px;}
+.styled{border:3px double #E5E5E5;padding:2px 3px;}
+.button{border:1px solid #AAA;margin-left:5px;padding:2px 3px;}
+.footer{background:#007ec5 url(bg.cache.png) repeat-x 0 -92px;color:#819EA0;font-size:90%;line-height:40px;text-align:center;white-space:nowrap;}
+.footer a{color:#FFF;text-decoration:none;}
+.footer a:hover{color:#FFF;text-decoration:underline;}f

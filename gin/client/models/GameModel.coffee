@@ -5,7 +5,7 @@ class root.GameModel extends Backbone.Model
     player1: null
     player2: null
     dealer: 1
-    turn: 1
+    currPlayer: null
     deck: new root.DeckModel
 
   initialize: =>
@@ -15,15 +15,7 @@ class root.GameModel extends Backbone.Model
     @set 'player2', new root.PlayerModel
       game: @
       name: 'player 2'
-
-  getPlayer: (id) =>
-    if id == 1
-      return @get('player1')
-    else if id == 2
-      return @get('player2')
-    else
-      return null
+    @set 'currPlayer', @player1
 
   onDiscard: =>
     console.log('discard button clicked')
-    

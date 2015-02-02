@@ -6,10 +6,11 @@ class root.CardView extends Backbone.View
   events:
     'click': '_onClick'
 
-  initialize: ({@model}) => # the {@model} auto-assigns parameter to @model
+  initialize: => # the {@model} auto-assigns parameter to @model
     # @$el.addClass('blocked')
     @model.on 'change:selected', @render
     @render()
+    console.log "initializing card view with model = #{@model.getName()}"
 
   render: =>
     console.log('rendering.')

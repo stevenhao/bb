@@ -15,7 +15,8 @@ class root.GameModel extends Backbone.Model
     @set 'player2', new root.PlayerModel
       game: @
       name: 'player 2'
-    @set 'currPlayer', @player1
+    @set 'currPlayer', @get 'player1'
 
   onDiscard: =>
     console.log('discard button clicked')
+    ((@get 'currPlayer').get 'hand').discard()

@@ -5,7 +5,7 @@ class root.HandModel extends Backbone.Model
     selectedCard: null
 
   add: (card) =>
-    cards = @get('cards')
+    cards = @get 'cards'
     cards.push card
     card.on 'change:selected', () =>
       if card.get 'selected' 
@@ -15,7 +15,10 @@ class root.HandModel extends Backbone.Model
         @set 'selectedCard', null
     # @sort()
 
-  discard: (card) =>
-    cards = @get('cards')
-    index = cards.indexOf(card)
+  discard: =>
+    cards = @get 'cards'
+    index = (cards).indexOf(@get 'selectedCard')
     cards.splice(index, 1)
+    for card in cards
+      console.log(card.getName())
+    @trigger 'discarded'

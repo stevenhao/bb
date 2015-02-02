@@ -17,5 +17,4 @@ class root.GameController
 
     @gameView.render()
     $('.game-container').html(@gameView.$el)
-
     $('.discard-button').on('click', @gameModel.onDiscard)

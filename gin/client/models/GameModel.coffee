@@ -15,7 +15,6 @@ class root.GameModel extends Backbone.Model
     @set 'player2', new root.PlayerModel
       game: @
       name: 'player 2'
-    
 
   getPlayer: (id) =>
     if id == 1
@@ -24,3 +23,7 @@ class root.GameModel extends Backbone.Model
       return @get('player2')
     else
       return null
+
+  onDiscard: =>
+    console.log('discard button clicked')
+    

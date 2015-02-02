@@ -28,6 +28,5 @@ class root.HandView extends Backbone.View
     @$el.children().each (index) -> #skinny arrow magic: @ refers to a child (an html-div-object)
       $(@).attr('hidden', true) # $(@) gives a jquery object (a wrapper around the html object)
       _.delay () =>
-        $(@).attr('hidden', false)  # the jquery object let's me call .attr
-        # @hidden = false # this is how i would do it without jquery
+        $(@).attr('hidden', false)  # the jquery object lets me call .attr
       , 50 * index + 500

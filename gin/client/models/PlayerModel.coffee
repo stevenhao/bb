@@ -5,7 +5,7 @@ class root.PlayerModel extends Backbone.Model
     name: "player"
     hand: null
 
-  initialize: ({@game, @name}) =>
+  initialize: =>
     console.log("initialized player with name=#{@name}")
     @dealHand()
   
@@ -13,4 +13,4 @@ class root.PlayerModel extends Backbone.Model
     @set 'hand', new HandModel
       cards: []
     for i in _.range(10)
-      (@game.get 'deck').deal(@get 'hand')
+      ((@get 'game').get 'deck').deal(@get 'hand')

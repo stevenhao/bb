@@ -26,7 +26,7 @@ class root.DeckModel extends Backbone.Model
       
   deal: (hand) =>
     # deal one card into hand (a hand model)
-    hand.get('cards').push @get('cards')[@cur++]
+    hand.add @get('cards')[@cur++]
 
   getTen: =>
     console.log('getting first ten cards of deck')

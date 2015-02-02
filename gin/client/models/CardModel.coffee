@@ -6,8 +6,6 @@ class root.CardModel extends Backbone.Model
      suit: null
      selected: false
 
-
-
   @rankNames:
     1: 'A'
     2: '2'
@@ -28,8 +26,6 @@ class root.CardModel extends Backbone.Model
     1: 'H'
     2: 'C'
     3: 'D'
-
-  initialize: ({@rank, @suit}) =>
 
   getName: =>
     return @_getRankName() + @_getSuitName()

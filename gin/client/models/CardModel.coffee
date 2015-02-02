@@ -45,5 +45,4 @@ class root.CardModel extends Backbone.Model
       @set 'selected', false
     else
       @set 'selected', true
-    @trigger 'changed'
     console.log('clicked')

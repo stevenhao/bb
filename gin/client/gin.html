@@ -4,17 +4,24 @@
 
 <body>
   <h1>Welcome to Gin!</h1>
-
-  {{> buttons}}
-  {{> game}}
+  <table><tr>
+    <td>{{> buttons}}</td>
+    <td>{{> discard}}</td>
+  </tr></table>
+  {{> hands}}
 </body>
 
 <template name="buttons">
   <button class="draw-button">Draw</button>
   <button class="discard-button">Discard</button>
+  <button class="knock-button">Knock</button>
 </template>
 
-<template name="game">
-  <p>This is where game will be displayed</p>
-  <div class="game-container"></div>
+<template name="discard">
+  <div class="discard-pile"></div>
+</template>
+
+<template name="hands">
+  <p>These are the hands.</p>
+  <div class="player-hands"></div>
 </template>

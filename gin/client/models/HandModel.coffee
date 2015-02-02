@@ -17,8 +17,11 @@ class root.HandModel extends Backbone.Model
 
   discard: =>
     cards = @get 'cards'
-    index = (cards).indexOf(@get 'selectedCard')
-    cards.splice(index, 1)
-    for card in cards
-      console.log(card.getName())
-    @trigger 'rerender'
+    sCard = @get 'selectedCard'
+    if sCard 
+      console.log "sCard exists"
+      index = (cards).indexOf(sCard)
+      cards.splice(index, 1)
+      @trigger 'rerender'
+      return sCard
+

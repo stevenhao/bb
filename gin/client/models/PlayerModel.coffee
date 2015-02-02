@@ -6,7 +6,7 @@ class root.PlayerModel extends Backbone.Model
     hand: null
 
   initialize: =>
-    console.log("initialized player with name=#{@name}")
+    console.log("initialized player with name #{@get 'name'}")
     @dealHand()
   
   dealHand: =>

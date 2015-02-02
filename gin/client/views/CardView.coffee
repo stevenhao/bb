@@ -10,10 +10,10 @@ class root.CardView extends Backbone.View
     # @$el.addClass('blocked')
     @model.on 'change:selected', @render
     @render()
-    console.log "initializing card view with model = #{@model.getName()}"
+    # console.log "initializing card view with model = #{@model.getName()}"
 
   render: =>
-    console.log('rendering.')
+    # console.log('rendering.')
     # perhaps to give selected cards the "raised" feel, we will add a whitespace block element above the image for unselected cards
     # and put the block for selected cards below the image for selected cards
 

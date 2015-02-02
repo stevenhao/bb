@@ -7,17 +7,17 @@ class root.HandView extends Backbone.View
   #   'click': 'animate' # when the div is clicked, "animate" is called
 
   initialize: ({@model}) =>
-    console.log "initializing hand view with model = #{@model}"
+    # console.log "initializing hand view with model = #{@model}"
     @render()
     @model.on 'rerender', @render
     
 
   render: =>
-    console.log('rendering.')
+    # console.log('rendering.')
     @$el.empty()
     cards = @model.get('cards')
     for cardModel in cards
-      console.log "making card view with model: #{cardModel}"
+      # console.log "making card view with model = #{cardModel.getName()}"
       cardView = new root.CardView
         model: cardModel
       @$el.append cardView.$el

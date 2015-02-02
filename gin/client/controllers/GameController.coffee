@@ -15,7 +15,7 @@ class root.GameController
     @gameView = new root.GameView
       model: @gameModel
 
-    @gameView.render()
-    $('.game-container').html(@gameView.$el)
+    $('.player-hands').html(@gameView.$el)
     $('.draw-button').on('click', @gameModel.onDraw)
     $('.discard-button').on('click', @gameModel.onDiscard)
+    $('.knock-button').on('click', @gameModel.onKnock)

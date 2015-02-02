@@ -13,7 +13,7 @@ class root.HandModel extends Backbone.Model
         @set 'selectedCard', card
       else
         @set 'selectedCard', null
-    # @sort()
+    @trigger 'rerender'
 
   discard: =>
     cards = @get 'cards'
@@ -21,4 +21,4 @@ class root.HandModel extends Backbone.Model
     cards.splice(index, 1)
     for card in cards
       console.log(card.getName())
-    @trigger 'discarded'
+    @trigger 'rerender'

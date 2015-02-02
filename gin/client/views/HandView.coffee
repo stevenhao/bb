@@ -9,7 +9,7 @@ class root.HandView extends Backbone.View
   initialize: ({@model}) =>
     console.log "initializing hand view with model = #{@model}"
     @render()
-    @model.on 'discarded', @render
+    @model.on 'rerender', @render
     
 
   render: =>

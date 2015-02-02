@@ -20,3 +20,7 @@ class root.GameModel extends Backbone.Model
   onDiscard: =>
     console.log('discard button clicked')
     ((@get 'currPlayer').get 'hand').discard()
+
+  onDraw: =>
+    console.log('draw button clicked')
+    (@get 'deck').deal((@get 'currPlayer').get 'hand')

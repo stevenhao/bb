@@ -17,4 +17,5 @@ class root.GameController
 
     @gameView.render()
     $('.game-container').html(@gameView.$el)
+    $('.draw-button').on('click', @gameModel.onDraw)
     $('.discard-button').on('click', @gameModel.onDiscard)

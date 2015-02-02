@@ -7,6 +7,8 @@ class root.GameView extends Backbone.View
   initialize: ({@model}) => # the {@model} auto-assigns parameter to @model
     # placeholder = $ '<p> Placeholder for Game View </p>'
     # @$el.append(placeholder)
+    discardButton = $ '<button onclick="discard()"> Discard </button>'
+    @$el.append (discardButton)
 
     player1Model = @model.getPlayer(1)
     player2Model = @model.getPlayer(2)

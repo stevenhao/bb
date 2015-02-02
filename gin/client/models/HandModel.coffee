@@ -4,10 +4,6 @@ class root.HandModel extends Backbone.Model
   defaults:
     selectedCard: null
 
-  initialize: () =>
-    # @set 'cards', []
-    console.log('initialize1')
-
   add: (card) =>
     cards = @get('cards')
     cards.push card

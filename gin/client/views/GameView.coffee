@@ -4,8 +4,7 @@ class root.GameView extends Backbone.View
 
   className: 'game'
 
-  initialize: => # the {@model} auto-assigns parameter to @model
-
+  initialize: =>
     discardModel = @model.get 'discardPile'
     player1Model = @model.get 'player1'
     player2Model = @model.get 'player2'

@@ -8,6 +8,7 @@ class root.GameModel extends Backbone.Model
     currPlayer: null
     deck: new root.DeckModel
     discardPile: null
+    canDraw: null
 
   initialize: =>
     @set 'player1', new root.PlayerModel
@@ -19,6 +20,7 @@ class root.GameModel extends Backbone.Model
     @set 'currPlayer', @get 'player1'
     @set 'discardPile', new root.DiscardModel
       cards: []
+    @set 'canDraw', true
     # @testArrays()
 
   onDiscard: =>
@@ -30,14 +32,19 @@ class root.GameModel extends Backbone.Model
       @changeTurns()
 
   onDraw: =>
-    console.log "draw button clicked"
-    (@get 'deck').deal((@get 'currPlayer').get 'hand')
+    console.log "#{@get 'canDraw'}"
+    if @get 'canDraw'
+      console.log "draw button clicked"
+      (@get 'deck').deal((@get 'currPlayer').get 'hand')
+      @set 'canDraw', false
 
   changeTurns: =>
     if (@get 'currPlayer') == (@get 'player1')
       @set 'currPlayer', @get 'player2'
     else
       @set 'currPlayer', @get 'player1'
+    @set 'canDraw', true
+
 
   testArrays: =>
     console.log 'testing arrays.'

@@ -13,6 +13,7 @@ class root.HandModel extends Backbone.Model
         @set 'selectedCard', card
       else
         @set 'selectedCard', null
+    (@get 'cards').sort()
     @trigger 'rerender'
 
   discard: =>

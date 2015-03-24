@@ -19,3 +19,4 @@ class root.GameController
     $('.draw-button').on('click', @gameModel.onDraw)
     $('.discard-button').on('click', @gameModel.onDiscard)
     $('.knock-button').on('click', @gameModel.onKnock)
+    #put in click discard pile --> onPickUp

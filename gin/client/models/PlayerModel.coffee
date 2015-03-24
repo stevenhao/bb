@@ -4,6 +4,7 @@ class root.PlayerModel extends Backbone.Model
   defaults:
     name: "player"
     hand: null
+    points: 0
 
   initialize: =>
     console.log("initialized player with name #{@get 'name'}")
@@ -14,3 +15,6 @@ class root.PlayerModel extends Backbone.Model
       cards: []
     for i in _.range(10)
       ((@get 'game').get 'deck').deal(@get 'hand')
+
+  rerender: =>
+    @trigger 'rerender'

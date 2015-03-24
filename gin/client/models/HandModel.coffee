@@ -3,6 +3,7 @@ root = exports ? this
 class root.HandModel extends Backbone.Model
   defaults:
     selectedCard: null
+    cards: []
 
   add: (card) =>
     cards = @get 'cards'
@@ -13,7 +14,7 @@ class root.HandModel extends Backbone.Model
         @set 'selectedCard', card
       else
         @set 'selectedCard', null
-    (@get 'cards').sort()
+    @sortCards (@get 'cards')
     @trigger 'rerender'
 
   discard: =>
@@ -25,4 +26,28 @@ class root.HandModel extends Backbone.Model
       cards.splice(index, 1)
       @trigger 'rerender'
       return sCard
+
+  sortCards: (cards) =>
+    console.log 'sorting cards'
+    cards.sort (a, b) -> a.getSortingIndex() - b.getSortingIndex()
+    @trigger 'rerender'
+
+  calcDeadwood: =>
+    cards = @get 'cards'
+    count = 0
+    tempCount = 0
+    tempRank = 0
+    for card in cards
+      # console.log card.get 'rank'
+      r = card.get 'rank'
+      if r == tempRank
+        tempCount++
+      else
+        if tempCount < 3
+          count += (Math.min.apply @, [tempRank, 10]) * tempCount
+        tempCount = 1
+        tempRank = r
+    if tempCount < 3
+      count += (Math.min.apply @, [tempRank, 10]) * tempCount
+    return count
 

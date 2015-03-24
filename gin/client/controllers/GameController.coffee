@@ -17,6 +17,7 @@ class root.GameController
     $('.draw-button').on('click', @gameModel.onDraw)
     $('.discard-button').on('click', @gameModel.onDiscard)
     $('.knock-button').on('click', @gameModel.onKnock)
+    #put in click discard pile --> onPickUp
 
   _createPlayerView: =>
     player1View = new root.PlayerView
@@ -30,4 +31,3 @@ class root.GameController
     discardView = new root.DiscardView
       model: @gameModel.get('discardPile')
     $('.discard-pile').html(discardView.$el)
-

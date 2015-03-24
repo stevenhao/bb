@@ -36,6 +36,9 @@ class root.CardModel extends Backbone.Model
   _getSuitName: =>
     return @suitNames[@get 'suit']
 
+  getSortingIndex: =>
+    return (@get 'rank') * 4 + (@get 'suit')
+
   toggleSelected: =>
     if @get 'selected'
       @set 'selected', false

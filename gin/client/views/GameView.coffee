@@ -2,9 +2,9 @@ root = exports ? this
 
 class root.GameView extends Backbone.View
 
-  className: 'game'
+  className: 'players'
 
-  initialize: =>
+  initialize: () =>
     discardModel = @model.get 'discardPile'
     player1Model = @model.get 'player1'
     player2Model = @model.get 'player2'

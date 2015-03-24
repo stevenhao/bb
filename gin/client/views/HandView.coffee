@@ -1,7 +1,7 @@
 root = exports ? this
 
 class root.HandView extends Backbone.View
-  className: 'hand'
+  className: 'hand center'
 
   # events: # this is a backbone thing
   #   'click': 'animate' # when the div is clicked, "animate" is called

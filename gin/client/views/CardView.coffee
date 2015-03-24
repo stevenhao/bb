@@ -20,7 +20,6 @@ class root.CardView extends Backbone.View
     card = @model.getName() # in the form AS or 4H...
     # @$el.style.background-image = "url(images/#{card}.jpg)"
     img = $('<img>').attr('src', "images/#{card}.jpg")
-
     block = $('<div>')
     block.addClass('buffer')
 

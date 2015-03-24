@@ -15,7 +15,6 @@ class root.DiscardView extends Backbone.View
     @$el.empty()
     cards = @model.get('cards')
     card = cards[cards.length - 1]
-    card.set 'selected', false
-    cardView = new root.CardView
-      model: card
-    @$el.append cardView.$el
+    # @$el.style.background-image = "url(images/#{card}.jpg)"
+    img = $('<img>').attr('src', "images/#{card}.jpg")
+    @$el.html(img)

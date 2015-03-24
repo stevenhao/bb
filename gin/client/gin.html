@@ -3,25 +3,28 @@
 </head>
 
 <body>
-  <h1>Welcome to Gin!</h1>
-  <table><tr>
-    <td>{{> buttons}}</td>
-    <td>{{> discard}}</td>
-  </tr></table>
-  {{> hands}}
+  <h1><center>BbBbBbBbBbBbBbBbBbBbBbBbB</center></h1>
+
+  {{> mainPanel}}
+  {{> lowerPanel}}
 </body>
 
-<template name="buttons">
-  <button class="draw-button">Draw</button>
-  <button class="discard-button">Discard</button>
-  <button class="knock-button">Knock</button>
+<template name="mainPanel">
+  <div class="main-bar hor">
+    <div class="player-1-hand player-hand panel-element"></div>
+    <div class="panel-element">
+      <div class="vert-center">
+        <button class="draw-button hor-center">Draw</button>
+        <div class="discard-pile hor-center"></div>
+    </div>
+    </div>
+    <div class="player-2-hand player-hand panel-element"></div>
+  </div>
 </template>
 
-<template name="discard">
-  <div class="discard-pile"></div>
-</template>
-
-<template name="hands">
-  <p>These are the hands.</p>
-  <div class="player-hands"></div>
+<template name="lowerPanel">
+  <div class="buttons-bar hor-center">
+    <button class="discard-button btn">Discard</button>
+    <button class="knock-button btn">Knock</button>
+  </div>
 </template>

@@ -1,8 +1,13 @@
 @import "cropless/crop.less";
 
 @card-width: 150px;
-@blocked-card-width: 21px;
 @card-height: 210px;
+
+@blocked-card-width: 21px;
+
+@discard-width: 135px;
+@discard-height: 189px;
+
 @buffer-height: 30px;
 
 body, html {
@@ -13,101 +18,68 @@ body, html {
   box-sizing: border-box;
 }
 
-.card {
-    float: left;
-
-    div {
-      width: @card-width;
-      height: @buffer-height;
-    }
-
-    img {
-      width: @card-width;
-      height: @card-height;
-    }
-    width: @blocked-card-width;
+.hor-center {
+  /*width: 100%;*/
+  display: block;
+  margin-left: auto;  
+  margin-right: auto;
+  background-color: #b0e0e6;
 }
 
-.player {
-  clear: left;
-}
-/*
-.main-content {
-  height: 100%;
-  margin: 0 auto;
-  width: @totalWidth
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.layout-column {
-  height: 100%;
+.btn {
   display: inline-block;
+}
+
+.panel-element {
   float: left;
+  width: 33%;
+  height: 100%;
+  /*display: inline-block;*/
+}
 
-  &.side-bar {
-    width: @side-bar-width;
-    border: 1px solid black;
+.buttons-bar {
+  width: 110px;
+  /*height: 20%;*/
+  clear: left;
+  /*display: inline-block;*/
+}
+
+.main-bar {
+  width: 100%;
+  height: 70%;
+}
+
+.card {
+  float: left;
+  display: inline-block;
+  div {
+    width: @card-width;
+    height: @buffer-height;
+  }
+
+  img {
+    width: @card-width;
+    height: @card-height;
+  }
+  width: @blocked-card-width;
+}
+
+.discard-pile {
+  width: 10%;
+  min-width: @card-width;
+}
+
+.discard {
+
+  img {
+    width: @discard-width;
+    height: @discard-height;
   }
 }
 
-.center-view {
-  width: @center-width;
-  border: 1px solid black;
-  padding: 10px;
-}
-*/
-
-/*
-.chess-board-container {
-  margin: auto;
-  width: @dim * 8;
-  height: @dim * 8;
-  .square {
-    width: @dim;
-    height: @dim;
-    display: inline-block;
-    &.black {
-      background-color: #d18b47;
-    }
-    &.white {
-      background-color: #ffce9e;
-    }
-  }
-  .row {
-    height: @dim;
-  }
-  .square {
-    &:first-child {
-      border-left: 1px solid black;
-    }
-    &:last-child {
-      border-right: 1px solid black;
-    }
-  }
-  .row {
-    height: @dim;
-    &:first-child {
-      .square {
-        border-top: 1px solid black;
-      }
-    }
-    &:last-child {
-      .square {
-        border-bottom: 1px solid black;
-      }
-    }
-  }
-  .square {
-    float: left;
-    border: 2px solid transparent;
-    &.selected {
-      border: 2px solid red;
-    }
-    &.validMove {
-      border: 2px solid yellow;
-    }
-    img {
-      width: @dim;
-      height: @dim;
-    }
-  }
-}*/

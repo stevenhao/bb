@@ -4,7 +4,7 @@ class root.DiscardModel extends Backbone.Model
 
   add: (card) =>
     (@get 'cards').push card
-    card.toggleSelected()
+    card.inDiscard()
     @trigger 'rerender'
 
   remove: =>

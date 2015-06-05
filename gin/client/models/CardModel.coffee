@@ -5,6 +5,7 @@ class root.CardModel extends Backbone.Model
      rank: null
      suit: null
      selected: false
+     inDiscardPile: false
 
   rankNames:
     1: 'A'
@@ -40,8 +41,13 @@ class root.CardModel extends Backbone.Model
     return (@get 'rank') * 4 + (@get 'suit')
 
   toggleSelected: =>
-    if @get 'selected'
-      @set 'selected', false
-    else
-      @set 'selected', true
+    if not @get 'inDiscardPile'
+      if @get 'selected'
+        @set 'selected', false
+      else
+        @set 'selected', true
     console.log('clicked')
+
+  inDiscard: =>
+    @set 'selected', false
+    @set 'inDiscardPile', true

@@ -8,7 +8,6 @@ class root.GameController
     @_createDiscardView()
     @_addListeners()    
 
-
   _createGameModel: =>
     @gameModel = new root.GameModel
 

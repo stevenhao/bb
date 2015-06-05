@@ -23,11 +23,6 @@ class root.GameModel extends Backbone.Model
       cards: []
     @set 'canDraw', true
 
-  restart: =>
-    @set 'deck', new root.DeckModel
-    (@get 'player1').dealHand()
-    (@get 'player2').dealHand()
-
   onDiscard: =>
     console.log "discard button clicked"
     discardCard = ((@get 'currPlayer').get 'hand').discard()
@@ -81,7 +76,7 @@ class root.GameModel extends Backbone.Model
       console.log add
       console.log winner.get 'points'
       @trigger 'rerender'
-      @initialize()
+      @endGame()
     else
       console.log 'invalid knock'
     (@get 'currPlayer').rerender()
@@ -94,3 +89,16 @@ class root.GameModel extends Backbone.Model
       @set 'currPlayer', @get 'player1'
       @set 'othPlayer', @get 'player2'
     @set 'canDraw', true
+
+  endGame: =>
+    if (@get 'player1').points > 100
+      console.log "player 1 wins"
+    if (@get 'player2').points > 100
+      console.log "player 2 wins"
+    else
+      @restart()
+
+  restart: =>
+    @set 'deck', new root.DeckModel
+    (@get 'player1').dealHand()
+    (@get 'player2').dealHand()

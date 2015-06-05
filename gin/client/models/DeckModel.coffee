@@ -24,6 +24,9 @@ class root.DeckModel extends Backbone.Model
       cards[newIndex] = cards[index]
       cards[index] = tempCard
       
-  deal: (hand) =>
+  deal: (hand, select) =>
     # deal one card into hand (a hand model)
-    hand.add @get('cards')[@cur++]
+    card = @get('cards')[@cur++]
+    hand.add(card)
+    if select
+      card.toggleSelected()

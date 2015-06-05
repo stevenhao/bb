@@ -35,7 +35,7 @@ class root.GameModel extends Backbone.Model
     console.log "#{@get 'canDraw'}"
     if @get 'canDraw'
       console.log "draw from deck button clicked"
-      (@get 'deck').deal((@get 'currPlayer').get 'hand')
+      (@get 'deck').deal(((@get 'currPlayer').get 'hand'), true)
       @set 'canDraw', false
 
   onDrawDiscard: =>
@@ -45,6 +45,7 @@ class root.GameModel extends Backbone.Model
       card = (@get 'discardPile').remove()
       card.set 'inDiscardPile', false
       ((@get 'currPlayer').get 'hand').add(card)
+      card.toggleSelected()
       @set 'canDraw', false
 
   # onPickUp: => Steven did you write this? sorry I saw it after writing the previous function

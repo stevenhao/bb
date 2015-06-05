@@ -44,6 +44,7 @@ class root.GameModel extends Backbone.Model
     if @get 'canDraw'
       console.log "draw from discard button clicked"
       card = (@get 'discardPile').remove()
+      card.set 'inDiscardPile', false
       ((@get 'currPlayer').get 'hand').add(card)
       @set 'canDraw', false
 

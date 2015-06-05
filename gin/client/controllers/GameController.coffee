@@ -14,7 +14,8 @@ class root.GameController
     @gameModel = new root.GameModel
 
   _addListeners: => 
-    $('.draw-button').on('click', @gameModel.onDraw)
+    $('.drawDeck-button').on('click', @gameModel.onDrawDeck)
+    $('.drawDiscard-button').on('click', @gameModel.onDrawDiscard)
     $('.discard-button').on('click', @gameModel.onDiscard)
     $('.knock-button').on('click', @gameModel.onKnock)
     #put in click discard pile --> onPickUp

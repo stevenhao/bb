@@ -32,11 +32,19 @@ class root.GameModel extends Backbone.Model
       (@get 'discardPile').add(discardCard)
       @changeTurns()
 
-  onDraw: =>
+  onDrawDeck: =>
     console.log "#{@get 'canDraw'}"
     if @get 'canDraw'
-      console.log "draw button clicked"
+      console.log "draw from deck button clicked"
       (@get 'deck').deal((@get 'currPlayer').get 'hand')
+      @set 'canDraw', false
+
+  onDrawDiscard: =>
+    console.log "#{@get 'canDraw'}"
+    if @get 'canDraw'
+      console.log "draw from discard button clicked"
+      card = (@get 'discardPile').remove()
+      ((@get 'currPlayer').get 'hand').add(card)
       @set 'canDraw', false
 
   # onPickUp: =>

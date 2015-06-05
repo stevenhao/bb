@@ -11,10 +11,14 @@ class root.DiscardView extends Backbone.View
     @model.on 'rerender', @render
     
   render: =>
-    console.log('rendering.')
+    # console.log('rendering.')
     @$el.empty()
     cards = @model.get('cards')
-    card = cards[cards.length - 1]
+    if cards.length > 0
+      cardModel = cards[cards.length - 1]
+      cardView = new root.CardView
+        model: cardModel
+      @$el.append cardView.$el
     # @$el.style.background-image = "url(images/#{card}.jpg)"
-    img = $('<img>').attr('src', "images/#{card}.jpg")
-    @$el.html(img)
+    # img = $('<img>').attr('src', "images/#{card}.jpg")
+    # @$el.html(img)

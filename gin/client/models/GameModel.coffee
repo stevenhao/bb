@@ -90,15 +90,18 @@ class root.GameModel extends Backbone.Model
       @set 'othPlayer', @get 'player2'
     @set 'canDraw', true
 
-  endGame: =>
-    if (@get 'player1').points > 100
-      console.log "player 1 wins"
-    if (@get 'player2').points > 100
-      console.log "player 2 wins"
-    else
-      @restart()
-
   restart: =>
     @set 'deck', new root.DeckModel
     (@get 'player1').dealHand()
     (@get 'player2').dealHand()
+
+  endGame: =>
+    player1Points = (@get 'player1').points
+    player2Points = (@get 'player2').points
+    if player1Points <= 100 and player2Points < 100
+      @restart()
+    else
+      if player1Points > 100
+        console.log 'player 1 wins'
+      else
+        console.log 'player 2 wins'

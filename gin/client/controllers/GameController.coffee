@@ -3,7 +3,6 @@ root = exports ? this
 class root.GameController
   initialize: =>
     console.log('initializing game.')
-
     @_createGameModel()
     @_createPlayerView()
     @_createDiscardView()
@@ -18,6 +17,7 @@ class root.GameController
     $('.drawDiscard-button').on('click', @gameModel.onDrawDiscard)
     $('.discard-button').on('click', @gameModel.onDiscard)
     $('.knock-button').on('click', @gameModel.onKnock)
+    $('.restart-button').on('click', @gameModel.restart)
     #put in click discard pile --> onPickUp
 
   _createPlayerView: =>

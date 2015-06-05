@@ -22,7 +22,11 @@ class root.GameModel extends Backbone.Model
     @set 'discardPile', new root.DiscardModel
       cards: []
     @set 'canDraw', true
-    # @testArrays()
+
+  restart: =>
+    @set 'deck', new root.DeckModel
+    (@get 'player1').dealHand()
+    (@get 'player2').dealHand()
 
   onDiscard: =>
     console.log "discard button clicked"
@@ -48,7 +52,7 @@ class root.GameModel extends Backbone.Model
       ((@get 'currPlayer').get 'hand').add(card)
       @set 'canDraw', false
 
-  # onPickUp: =>
+  # onPickUp: => Steven did you write this? sorry I saw it after writing the previous function
   #   console.log 'on pick up'
   #   if @get 'canDraw'
   #     console,log "picked up from discard"
@@ -77,6 +81,7 @@ class root.GameModel extends Backbone.Model
       console.log add
       console.log winner.get 'points'
       @trigger 'rerender'
+      @initialize()
     else
       console.log 'invalid knock'
     (@get 'currPlayer').rerender()

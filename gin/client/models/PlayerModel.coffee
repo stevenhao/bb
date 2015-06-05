@@ -15,6 +15,7 @@ class root.PlayerModel extends Backbone.Model
       cards: []
     for i in _.range(10)
       ((@get 'game').get 'deck').deal(@get 'hand')
+    @rerender()
 
   rerender: =>
     @trigger 'rerender'

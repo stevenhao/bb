@@ -12,16 +12,20 @@ class root.GameModel extends Backbone.Model
 
   initialize: =>
     @set 'player1', new root.PlayerModel
-      game: @
       name: 'player 1'
     @set 'player2', new root.PlayerModel
-      game: @
       name: 'player 2'
     @set 'currPlayer', @get 'player1'
     @set 'othPlayer', @get 'player2'
     @set 'discardPile', new root.DiscardModel
       cards: []
     @set 'canDraw', true
+
+  startGame: =>
+    for i in _.range(10)
+      # console.log 'dealing.'
+      (@get 'deck').deal (@get 'player1').get 'hand', false
+      (@get 'deck').deal (@get 'player2').get 'hand', false
 
   onDiscard: =>
     console.log "discard button clicked"

@@ -1,7 +1,6 @@
 root = exports ? this
 
 class root.PlayerView extends Backbone.View
-
   className: 'player'
   handView = null
 

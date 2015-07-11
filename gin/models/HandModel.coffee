@@ -1,9 +1,8 @@
 root = exports ? this
 
 class root.HandModel extends Backbone.Model
-  defaults:
-    selectedCard: null
-    cards: []
+  initialize: () =>
+    @set 'cards', []
 
   add: (card) =>
     cards = @get 'cards'

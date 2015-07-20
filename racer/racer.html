@@ -5,7 +5,10 @@
 <body>
   <h1>Welcome to <span style="color:red">STEVEN STEVEN STEVEN!</span></h1>
   <!-- <div class="gameView" width="644px"> </div> -->
-  <table class="gameView" cellspacing="5" cellpadding="5" width="644px">
+  <table class="gameView chrome_m" cellspacing="5" cellpadding="5" width="644px">
+    <tr> {{>progress}}</tr>
+    <tr> {{>passage}}</tr>
+    <tr> {{>inputbar}}</tr>
 <!--     <tr> {{> passage}} </tr>
     <tr> {{> inputbar}} </tr>  
     <tr> haha </tr>
@@ -36,4 +39,89 @@
   <div class="inputbarContainer">
     <input type="text" class="txtInput" autocorrect="off" autocapitalize="off">
   </div>
+</template>
+
+<template name="progress">
+  <table cellspacing="0" cellpadding="0" class="scoreboard">
+  <tbody>
+    <tr>
+      <td align="left" style="vertical-align: top;">
+        <table cellspacing="0" cellpadding="0" class="row">
+          <tbody>
+            <tr>
+              <td align="left" width="80%" style="vertical-align: bottom;">
+                <div class="progressBar" style="position: relative; overflow: visible; height: 27px;">
+                  <table cellspacing="0" cellpadding="0" style="position: absolute; left: 0px; top: 0px;">
+                    <tbody>
+                      <tr>
+                        <td align="left" style="vertical-align: top;">
+                          <div class="userInfoView bold">
+                            <div class="gwt-Label" style="white-space: nowrap;">
+                              You
+                            </div>
+                          </div>
+                        </td>
+                        <td align="left" style="vertical-align: top;">
+                          <img onload="this.__gwtLastUnhandledEvent=&quot;load&quot;;" src="http://play.typeracer.com/clear.cache.gif" style="width:58px;height:24px;background:url(http://play.typeracer.com/335AE846C4E0C3647FC3331F512A1E25.cache.png) no-repeat -638px 0px;" border="0" class="avatar">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+              <td align="left" width="20%" style="vertical-align: top;">
+                <div class="rankPanel">
+                  <div class="rank" style="white-space: normal;">
+                    &nbsp;
+                  </div>
+                  <div class="rankPanelWpm" style="white-space: normal;">
+                    0 wpm
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" style="vertical-align: top;">
+        <table cellspacing="0" cellpadding="0" class="row" aria-hidden="true" style="display: none;">
+          <tbody>
+            <tr>
+              <td align="left" width="80%" style="vertical-align: bottom;">
+                <div class="progressBar" style="position: relative; overflow: visible; height: 27px;">
+                  <table cellspacing="0" cellpadding="0" style="position: absolute; left: 0px; top: 0px;">
+                    <tbody>
+                      <tr>
+                        <td align="left" style="vertical-align: top;">
+                          <div class="playername-blank">
+                            Could be you
+                          </div>
+                        </td>
+                        <td align="left" style="vertical-align: top;">
+                          <img onload="this.__gwtLastUnhandledEvent=&quot;load&quot;;" src="http://play.typeracer.com/clear.cache.gif" style="width:58px;height:24px;background:url(http://play.typeracer.com/335AE846C4E0C3647FC3331F512A1E25.cache.png) no-repeat -58px 0px;" border="0" class="avatar">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+              <td align="left" width="20%" style="vertical-align: top;">
+                <div class="rankPanel">
+                  <div class="rank" style="white-space: normal;">
+                    &nbsp;
+                  </div>
+                  <div class="rankPanelWpm" style="white-space: normal;">
+                    &nbsp;
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </template>

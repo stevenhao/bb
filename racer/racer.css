@@ -10,6 +10,8 @@
   border-width: medium;
 }
 
+body{color:#466;font:normal 80% "Lucida Sans Unicode",sans-serif;margin:0;  cursor: default;}
+
 .unselectable{
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -32,3 +34,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.scoreboard{  width:100%; }
+.scoreboard .row{width:100%;}
+.scoreboard .row .userInfoView{width:80px;text-align:right;padding-right:10px;white-space:nowrap;overflow:hidden;}
+.scoreboard .row .progressBar{background-color:transparent;border-bottom-style:dashed;border-color:goldenrod;width:100%;margin-top:6px;}
+.scoreboard .row .rankPanel{margin-left:10px;}
+.scoreboard .row .rankPanel .rankPanelWpm-user{font-size:150%;font-weight:bold;}
